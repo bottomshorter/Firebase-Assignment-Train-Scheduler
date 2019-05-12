@@ -1,0 +1,30 @@
+#card-add-train {
+    background-color: teal;
+    color: white;
+    font-style: bold;
+}
+
+#current-train-card{
+    background-color: teal;
+    color: white;
+    font-style: bold;    
+}
+
+#container {
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.col-2{
+    text-align: center;
+    
+}
+
+#card2, #card1 {
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.CET{
+    font-weight: 600;
+}

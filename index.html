@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <title>Train Time!!</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+
+  <!-- Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <br>
+
+  <div id="container">
+    <!--Jumbotron-->
+    <div class="jumbotron" style="background-color: brown; color: white">
+      <h1 class="text-center">Anytime is Train Time</h1>
+      <h3 class="text-center">Chugga Choo Choo.</h3>
+    </div>
+
+
+
+
+    <div class="card bg-light mb-3" id="card1">
+      <div class="card-header" id="current-train-card" style="background-color: brown; color: white"> Current Train Schedule </div>
+      <div class="card-body" id="new-train">
+        <div class="row">
+          <div class="col-2 CET">Train Name</div>
+          <div class="col-2 CET">Destination</div>
+          <div class="col-2 CET">Freqency</div>
+          <div class="col-2 CET">Next Arrival</div>
+          <div class="col-2 CET">Minutes away</div>
+        </div>
+        <hr>
+
+      <div class="row">
+        <div class="col-2" id="TrainName"></div>
+        <div class="col-2" id="Destination"></div>
+        <div class="col-2" id="Freqency"></div>
+        <div class="col-2" id="NextArrival"></div>
+        <div class="col-2" id="MinutesAway"></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="card bg-light mb-3" id="card2">
+      <div class="card-header" id="card-add-train" style="background-color: brown; color:white"> Add Train </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputTrain">Train Name</label>
+          <input type="email" class="form-control" id="trainName-input" aria-describedby="emailHelp"
+            placeholder="Train Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Destination</label>
+          <input type="email" class="form-control" id="destination-input" aria-describedby="emailHelp" placeholder="Destination">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">First Train Time: (HH:MM - Military Time)</label>
+          <input type="time" class="form-control" id="firstTrainTime-input" placeholder="HH:MM">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Frequency (min)</label>
+          <input type="number" class="form-control" id="monthlyRate-input"
+            placeholder="Minutes">
+        </div>
+
+        <!--No input for total billed because it's computed in JS and appended into the first card-->
+
+        <button type="submit" class="btn btn-info" id="submit-button"><i class="glyphicon glyphicon-search"></i>
+          Submit </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script src="assets/logic.js">
+</script>
+
+</html>
